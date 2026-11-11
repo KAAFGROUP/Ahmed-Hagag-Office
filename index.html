@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خطة التطوير التجاري والرقمي المتكاملة | مكتب أحمد حجاج للشحن × KAAF Group</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Cairo & IBM Plex Sans Arabic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kaaf: {
+                            blue: '#0A4C86',
+                            blueLight: '#1C75C8',
+                            blueDeep: '#05233E',
+                            blueDarkest: '#031424',
+                            green: '#00875A',
+                            greenLight: '#00B377',
+                            greenDeep: '#023824',
+                            gold: '#D4AF37',
+                            goldLight: '#F5DE88',
+                            goldDark: '#A6821E',
+                            purple: '#7C3AED',
+                            purpleLight: '#A78BFA',
+                            rose: '#E11D48',
+                            roseLight: '#FB7185',
+                            cyan: '#06B6D4',
+                            cyanLight: '#67E8F9',
+                            amber: '#F59E0B',
+                            dark: '#030812',
+                            darkSlate: '#081220',
+                            cardBg: '#0B1A2E',
+                            border: '#1B314B'
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        ibm: ['IBM Plex Sans Arabic', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'glow-blue': '0 0 35px -5px rgba(10, 76, 134, 0.6)',
+                        'glow-gold': '0 0 35px -5px rgba(212, 175, 55, 0.55)',
+                        'glow-cyan': '0 0 35px -5px rgba(6, 182, 212, 0.6)',
+                        'glow-green': '0 0 35px -5px rgba(0, 135, 90, 0.6)',
+                        'web-card': '0 20px 45px -15px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.08)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Cairo', 'IBM Plex Sans Arabic', sans-serif;
+            background-color: #030812;
+            color: #E2E8F0;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        #interactive-bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.65;
+        }
+
+        .kaaf-ribbon {
+            background: linear-gradient(90deg, 
+                #0A4C86 0%, 
+                #06B6D4 20%, 
+                #00875A 40%, 
+                #D4AF37 60%, 
+                #7C3AED 80%, 
+                #E11D48 100%
+            );
+            height: 4px;
+        }
+
+        .web-card-blue {
+            background: linear-gradient(135deg, rgba(10, 30, 56, 0.85) 0%, rgba(5, 16, 32, 0.95) 100%);
+            border: 1px solid rgba(28, 117, 200, 0.35);
+            backdrop-filter: blur(14px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .web-card-blue:hover {
+            border-color: rgba(28, 117, 200, 0.75);
+            transform: translateY(-3px);
+            box-shadow: 0 16px 35px -10px rgba(10, 76, 134, 0.5);
+        }
+
+        .web-card-gold {
+            background: linear-gradient(135deg, rgba(45, 36, 15, 0.85) 0%, rgba(18, 14, 5, 0.95) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            backdrop-filter: blur(14px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .web-card-gold:hover {
+            border-color: rgba(212, 175, 55, 0.85);
+            transform: translateY(-3px);
+            box-shadow: 0 16px 35px -10px rgba(212, 175, 55, 0.5);
+        }
+
+        .web-card-green {
+            background: linear-gradient(135deg, rgba(8, 38, 28, 0.85) 0%, rgba(4, 20, 15, 0.95) 100%);
+            border: 1px solid rgba(0, 179, 119, 0.35);
+            backdrop-filter: blur(14px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .web-card-green:hover {
+            border-color: rgba(0, 179, 119, 0.75);
+            box-shadow: 0 16px 35px -10px rgba(0, 135, 90, 0.5);
+        }
+
+        .web-card-cyan {
+            background: linear-gradient(135deg, rgba(8, 36, 48, 0.85) 0%, rgba(4, 18, 26, 0.95) 100%);
+            border: 1px solid rgba(6, 182, 212, 0.35);
+            backdrop-filter: blur(14px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .web-card-cyan:hover {
+            border-color: rgba(6, 182, 212, 0.75);
+            box-shadow: 0 16px 35px -10px rgba(6, 182, 212, 0.5);
+        }
+
+        .web-card-purple {
+            background: linear-gradient(135deg, rgba(30, 18, 54, 0.85) 0%, rgba(14, 8, 28, 0.95) 100%);
+            border: 1px solid rgba(167, 139, 250, 0.35);
+            backdrop-filter: blur(14px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes float-brand {
+            0%, 100% { transform: translateY(0px); box-shadow: 0 10px 25px -5px rgba(10, 76, 134, 0.6); }
+            50% { transform: translateY(-7px); box-shadow: 0 18px 30px -5px rgba(10, 76, 134, 0.8); }
+        }
+        @keyframes float-wa {
+            0%, 100% { transform: translateY(0px) scale(1); box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.5); }
+            50% { transform: translateY(-7px) scale(1.03); box-shadow: 0 18px 30px -5px rgba(37, 211, 102, 0.8); }
+        }
+
+        .anim-float-brand { animation: float-brand 4s ease-in-out infinite; }
+        .anim-float-wa { animation: float-wa 4s ease-in-out infinite 0.5s; }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.2s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: #D4AF37;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        @media print {
+            body { background-color: #fff !important; color: #111 !important; }
+            #interactive-bg-canvas, aside, header, #floating-kaaf-btn, #floating-wa-btn { display: none !important; }
+            .web-card-blue, .web-card-gold, .web-card-green, .web-card-purple, .web-card-cyan {
+                background: #f8fafc !important;
+                border: 1px solid #cbd5e1 !important;
+                color: #0f172a !important;
+                box-shadow: none !important;
+            }
+            .text-white { color: #0f172a !important; }
+            .text-gray-200, .text-gray-300, .text-gray-400 { color: #334155 !important; }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-kaaf-gold selection:text-slate-950">
+
+    <!-- Interactive Ambient Canvas Layer -->
+    <canvas id="interactive-bg-canvas"></canvas>
+
+    <!-- Floating Brand Logo (Bottom Left) -->
+    <aside id="floating-kaaf-btn" class="fixed bottom-6 left-6 z-50">
+        <a href="https://kaafmarketing.sa/" target="_blank" rel="noopener noreferrer" title="مجموعة كاف | KAAF Group" class="block w-14 h-14 rounded-full overflow-hidden border-2 border-kaaf-cyanLight/80 p-0.5 bg-black/90 anim-float-brand transition-all hover:scale-110 group backdrop-blur-md">
+            <img src="https://i.ibb.co/qLQcG9vr/Whats-App-Image-2026-08-26-at-11-29-58.jpg" alt="KAAF Group Logo" class="w-full h-full object-cover rounded-full" onerror="this.src='https://placehold.co/100x100/0A4C86/ffffff?text=KAAF'">
+        </a>
+    </aside>
+
+    <!-- Floating WhatsApp CTA (Bottom Right) -->
+    <aside id="floating-wa-btn" class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/966537553910" target="_blank" rel="noopener noreferrer" title="التواصل المباشر مع مستشار تطوير الأعمال (+966 53 755 3910)" class="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center border-2 border-emerald-200/80 anim-float-wa transition-all hover:scale-110 shadow-lg">
+            <i class="fa-brands fa-whatsapp text-3xl"></i>
+        </a>
+    </aside>
+
+    <!-- Document Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-kaaf-dark/90 backdrop-blur-xl border-b border-kaaf-border/70 px-4 lg:px-12 py-3.5 transition-all">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <!-- Brand Logo & Proposal Identity (Right in RTL) -->
+            <div class="flex items-center gap-3.5">
+                <div class="w-11 h-11 rounded-2xl overflow-hidden border border-kaaf-blueLight/50 p-0.5 bg-black shrink-0 shadow-glow-blue">
+                    <img src="https://i.ibb.co/qLQcG9vr/Whats-App-Image-2026-08-26-at-11-29-58.jpg" alt="KAAF Group Logo" class="w-full h-full object-cover rounded-xl" onerror="this.src='https://placehold.co/100x100/0A4C86/ffffff?text=KAAF'">
+                </div>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-base font-black text-white tracking-wide font-ibm">KAAF Group</span>
+                        <span class="px-2 py-0.5 rounded-full bg-kaaf-gold/20 text-kaaf-goldLight text-[10px] font-extrabold border border-kaaf-gold/40">عرض استشاري: مكتب أحمد حجاج للشحن</span>
+                    </div>
+                    <p class="text-[11px] text-gray-400 font-medium">خارطة التطوير اللوجستي • موقع إلكتروني و SEO • فريق مبيعات متخصص</p>
+                </div>
+            </div>
+
+            <!-- Anchor Links -->
+            <nav class="hidden lg:flex items-center gap-5 text-xs font-bold text-gray-300">
+                <a href="#strategy" class="nav-link hover:text-white">الرؤية الاستشارية</a>
+                <a href="#step-one" class="nav-link hover:text-white">الخطوة 1: الموقع و SEO</a>
+                <a href="#step-two" class="nav-link hover:text-white">الخطوة 2: فريق المبيعات</a>
+                <a href="#tracking" class="nav-link hover:text-white">إدارة الـ CRM والمؤشرات</a>
+                <a href="#synergy" class="nav-link hover:text-white text-kaaf-goldLight"><i class="fa-solid fa-arrows-split-up-and-left text-xs ml-1"></i> تكامل المنظومة</a>
+                <a href="#guarantees" class="nav-link hover:text-white">الجودة والضمانات</a>
+                <a href="#vision2030" class="nav-link hover:text-white">رؤية 2030</a>
+                <a href="#pricing" class="px-3.5 py-1.5 rounded-full bg-gradient-to-r from-kaaf-gold to-kaaf-amber text-slate-950 font-black hover:brightness-110 shadow-sm transition">العرض المالي (15,000 SAR)</a>
+            </nav>
+
+            <!-- WhatsApp Action Button (Left in RTL) -->
+            <div class="flex items-center gap-2 order-last">
+                <a href="https://wa.me/966537553910" target="_blank" class="px-3.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex items-center gap-1.5 transition">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                    <span>تواصل معنا</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Document Content Container -->
+    <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-20">
+
+        <!-- ========================================================================= -->
+        <!-- 00 — PROPOSAL HERO BANNER / COVER                                         -->
+        <!-- ========================================================================= -->
+        <section class="relative rounded-[32px] overflow-hidden p-8 sm:p-14 lg:p-16 bg-gradient-to-br from-kaaf-blueDeep/95 via-kaaf-darkSlate/95 to-kaaf-dark/95 border border-kaaf-gold/40 shadow-web-card text-white backdrop-blur-lg">
+            <div class="kaaf-ribbon absolute top-0 left-0 right-0"></div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-8 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-kaaf-gold/20 border border-kaaf-gold/40 text-kaaf-goldLight text-xs font-bold font-ibm">
+                        <i class="fa-solid fa-truck-fast text-kaaf-gold"></i>
+                        <span>وثيقة استشارية لتطوير الأعمال والحلول اللوجستية • Business Proposal</span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <span class="text-xs sm:text-sm font-bold text-gray-400 block tracking-wider uppercase font-ibm">Logistics Commercial Expansion Architecture</span>
+                        <h1 class="text-3xl sm:text-5xl font-black text-white leading-tight tracking-tight">
+                            خطة التطوير التجاري والرقمي المتكاملة <br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-l from-kaaf-goldLight via-yellow-200 to-kaaf-gold font-ibm">
+                                الموجهة إلى: مكتب أحمد حجاج للشحن
+                            </span>
+                        </h1>
+                        <p class="text-sm sm:text-base font-bold text-amber-100/90 font-cairo leading-relaxed max-w-3xl border-r-4 border-kaaf-gold pr-4 py-1 bg-kaaf-blueDeep/40 rounded-l-2xl">
+                            خارطة طريق استشارية ترتكز على خطوتين جوهريتين: تأسيس الثقة والمصداقية الرقمية عبر موقع مستقل ومهيأ لمحركات البحث، ثم التحرك النشط في السوق لاقتناص التعاقدات اللوجستية عبر فريق مبيعات متخصص.
+                        </p>
+                    </div>
+
+                    <!-- Meta Tags -->
+                    <div class="pt-2 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+                        <div class="p-3 rounded-2xl bg-black/60 border border-white/10">
+                            <span class="text-gray-400 block text-[11px]">مقدم العرض</span>
+                            <span class="font-black text-white font-ibm">KAAF Group</span>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-black/60 border border-kaaf-gold/40">
+                            <span class="text-gray-400 block text-[11px]">الجهة المستهدفة</span>
+                            <span class="font-black text-kaaf-goldLight font-ibm">مكتب أحمد حجاج للشحن</span>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-black/60 border border-white/10">
+                            <span class="text-gray-400 block text-[11px]">محورا الخطة</span>
+                            <span class="font-black text-kaaf-cyanLight">واجهة رقمية + فريق مبيعات</span>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-black/60 border border-white/10">
+                            <span class="text-gray-400 block text-[11px]">الاستثمار الشامل الموصى به</span>
+                            <span class="font-black text-emerald-400 font-ibm">15,000 SAR</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Executive Dual-Step Snapshot Box -->
+                <div class="lg:col-span-4 flex justify-center">
+                    <div class="w-full space-y-4 p-6 rounded-3xl bg-kaaf-cardBg/90 border border-kaaf-gold/40 shadow-2xl backdrop-blur-md">
+                        <div class="flex items-center justify-between pb-3 border-b border-white/10">
+                            <span class="text-xs font-black text-white flex items-center gap-2">
+                                <i class="fa-solid fa-route text-kaaf-gold"></i>
+                                <span>خارطة البداية الصحيحة</span>
+                            </span>
+                            <span class="text-[10px] text-kaaf-gold font-mono font-bold">2-STEP ROADMAP</span>
+                        </div>
+
+                        <div class="space-y-3 text-xs text-gray-300">
+                            <!-- Step 1 Summary -->
+                            <div class="p-3 rounded-2xl bg-kaaf-blue/20 border border-kaaf-blue/30 space-y-1">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-bold text-white flex items-center gap-1.5">
+                                        <i class="fa-solid fa-globe text-kaaf-cyanLight"></i>
+                                        الخطوة 1: الموقع الإلكتروني و SEO
+                                    </span>
+                                    <span class="font-mono text-kaaf-cyanLight font-bold">3,000 SAR</span>
+                                </div>
+                                <p class="text-[11px] text-gray-300">تجهيز واجهة رقمية مستقلة تعكس موثوقية المؤسسة مع دومين واستضافة وتهيئة محركات البحث لمدة شهر.</p>
+                            </div>
+
+                            <!-- Step 2 Summary -->
+                            <div class="p-3 rounded-2xl bg-kaaf-gold/15 border border-kaaf-gold/30 space-y-1">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-bold text-kaaf-goldLight flex items-center gap-1.5">
+                                        <i class="fa-solid fa-users-gear text-kaaf-gold"></i>
+                                        الخطوة 2: فريق المبيعات (3 أشهر)
+                                    </span>
+                                    <span class="font-mono text-kaaf-gold font-bold">12,000 SAR</span>
+                                </div>
+                                <p class="text-[11px] text-gray-300">فريق مبيعات متخصص يتولى البحث، التواصل، وتأهيل الفرص وحجز الاجتماعات مع توفير 3,000 ريال.</p>
+                            </div>
+                        </div>
+
+                        <!-- Combined CTA -->
+                        <div class="p-3 rounded-xl bg-black/60 border border-white/10 text-center">
+                            <span class="text-[11px] text-gray-400 block">إجمالي استثمار الخطوتين معاً (3 أشهر)</span>
+                            <span class="text-xl font-black text-kaaf-goldLight font-ibm">15,000 SAR</span>
+                        </div>
+
+                        <a href="#pricing" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-kaaf-gold to-kaaf-amber text-slate-950 font-black text-xs text-center block hover:brightness-110 transition shadow-md">
+                            استعراض تفاصيل العرض المالي والاستثماري
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 01 — CONSULTATIVE PREMISE: WHY LOGISTICS NEEDS THESE TWO STEPS            -->
+        <!-- ========================================================================= -->
+        <section id="strategy" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full bg-kaaf-gold/30 text-kaaf-goldLight font-black text-xs border border-kaaf-gold/50 flex items-center gap-1.5">
+                    <i class="fa-solid fa-compass text-[11px]"></i>
+                    <span>الرؤية الاستشارية</span>
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide flex items-center gap-2.5">
+                    <i class="fa-solid fa-lightbulb text-kaaf-gold text-xl"></i>
+                    <span>لماذا يحتاج نشاط الشحن والخدمات اللوجستية إلى هاتين الخطوتين بالتحديد؟</span>
+                </h2>
+            </div>
+
+            <div class="web-card-gold rounded-3xl p-6 sm:p-10 space-y-6 border-2 border-kaaf-gold/40 shadow-web-card">
+                <div class="flex items-center gap-3 pb-3 border-b border-kaaf-gold/30 text-kaaf-goldLight font-bold text-sm">
+                    <div class="w-9 h-9 rounded-xl bg-kaaf-gold/20 flex items-center justify-center text-kaaf-gold">
+                        <i class="fa-solid fa-scale-balanced text-base"></i>
+                    </div>
+                    <span>معادلة بناء العقود اللوجستية في قطاع الأعمال السعودي (B2B Logistics)</span>
+                </div>
+
+                <p class="text-base sm:text-lg text-slate-200 leading-relaxed font-medium">
+                    إن خدمات الشحن وسلاسل الإمداد ليست منتجاً استهلاكياً سريعاً يُباع عبر إعلان عابر؛ بل هي <strong>خدمات حيوية وحساسة تعتمد بالدرجة الأولى على الثقة العالية، والمصداقية المؤسسية، والالتزام التشغيلي الصارم</strong>. عندما تبحث الشركات والمصانع والمتاجر عن شريك لوجستي لنقل بضائعها، فإنها تبحث عن جهة واضحة المعالم، تمتلك كياناً موثوقاً تستطيع فحصه ومراجعته قبل توقيع أي عقد أو تسليم شحنة واحدة.
+                </p>
+
+                <!-- Two Complementary Pillars Presentation -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+                    <div class="p-6 rounded-2xl bg-black/40 border border-kaaf-blue/40 space-y-3">
+                        <div class="flex items-center gap-2.5 text-kaaf-cyanLight font-bold text-sm">
+                            <span class="w-8 h-8 rounded-lg bg-kaaf-blue/30 flex items-center justify-center font-bold text-xs border border-kaaf-blue/50">1</span>
+                            <h3 class="text-white font-black text-base">تأسيس الثقة الرقمية (Digital Anchor)</h3>
+                        </div>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            بدون موقع إلكتروني مستقل، يبدو الكيان وكأنه يفتقر للتوثيق الرسمي مهما كانت كفاءته على أرض الواقع. الموقع هو شهادة المصداقية التي يراجعها مدير المشتريات وصاحب القرار قبل أن يفتح بابه للنقاش التجاري.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-black/40 border border-kaaf-gold/40 space-y-3">
+                        <div class="flex items-center gap-2.5 text-kaaf-goldLight font-bold text-sm">
+                            <span class="w-8 h-8 rounded-lg bg-kaaf-gold/20 flex items-center justify-center font-bold text-xs border border-kaaf-gold/40">2</span>
+                            <h3 class="text-white font-black text-base">التحرك الميداني النشط (Proactive Outreach)</h3>
+                        </div>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            الموقع وحده لا يكفي إذا ظل مغلقاً ينتظر من يكتشفه صدفة. هنا يأتي دور فريق المبيعات المتخصص الذي يحمل هذا الموقع كأداة إثبات قوية، وينطلق لاستهداف المصانع والشركات وفتح قنوات الحوار وحجز الاجتماعات.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Strategic Summary Quote -->
+                <div class="p-4 rounded-2xl bg-black/75 border border-kaaf-gold/40 text-xs sm:text-sm text-amber-100 flex items-center gap-3">
+                    <i class="fa-solid fa-quote-right text-kaaf-gold text-xl shrink-0"></i>
+                    <span><strong>جوهر الرؤية الاستشارية:</strong> امتلاك موقع رسمي يبني الأمان النفسي والمصداقية، وفريق مبيعات متفرغ يحول هذا الأمان إلى تعاقدات فعلية مستمرة؛ وهذا هو الأساس الحقيقي لبناء نمو تجاري مستدام لمكتب أحمد حجاج للشحن.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 02 — STEP ONE: INDEPENDENT WEBSITE & SEO FOUNDATION                       -->
+        <!-- ========================================================================= -->
+        <section id="step-one" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full bg-kaaf-blue/30 text-kaaf-cyanLight font-black text-xs border border-kaaf-blue/50 flex items-center gap-1.5">
+                    <i class="fa-solid fa-globe text-[11px]"></i>
+                    <span>الخطوة الأولى</span>
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide flex items-center gap-2.5">
+                    <i class="fa-solid fa-laptop-code text-kaaf-cyanLight text-xl"></i>
+                    <span>تأسيس الوجود الرقمي للمؤسسة — إنشاء موقع إلكتروني مستقل واحترافي</span>
+                </h2>
+            </div>
+
+            <!-- Pricing Banner for Step 1 -->
+            <div class="relative overflow-hidden rounded-3xl p-6 sm:p-8 bg-gradient-to-r from-kaaf-blueDeep via-kaaf-darkSlate to-kaaf-cardBg border-2 border-kaaf-cyan shadow-glow-blue space-y-4">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="space-y-2 text-center md:text-right">
+                        <span class="px-3 py-1 rounded-full bg-kaaf-cyan/20 text-kaaf-cyanLight font-bold text-xs border border-kaaf-cyan/40 inline-flex items-center gap-1.5">
+                            <i class="fa-solid fa-award"></i>
+                            <span>تأسيس رقمي متكامل وشامل</span>
+                        </span>
+                        <h3 class="text-xl sm:text-2xl font-black text-white font-ibm">
+                            موقع إلكتروني رسمي مستقل + دومين واستضافة + تهيئة SEO لشهر
+                        </h3>
+                        <p class="text-xs sm:text-sm text-sky-100/90 leading-relaxed max-w-2xl">
+                            واجهة تجارية رسمية ومستقلة خاصة بمكتب أحمد حجاج للشحن، تعكس حجم أعمال المؤسسة وتستعرض خدمات الشحن والنقل والتخليص للشركات، مع تجهيز تقني كامل للبنية التحتية.
+                        </p>
+                    </div>
+
+                    <!-- Price Box -->
+                    <div class="shrink-0 bg-black/85 border-2 border-kaaf-cyan rounded-3xl p-6 text-center space-y-1 min-w-[220px] shadow-2xl">
+                        <span class="text-xs font-bold text-gray-400 block">السعر الإجمالي للخطوة الأولى</span>
+                        <div class="text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-kaaf-cyanLight via-sky-200 to-white font-ibm tracking-tight">
+                            3,000 <span class="text-xl text-kaaf-cyanLight font-cairo">ريال</span>
+                        </div>
+                        <span class="text-[11px] text-gray-300 font-bold block pt-1">فقط ثلاثة آلاف ريال سعودي لا غير</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scope Details & What It Includes -->
+            <div class="web-card-blue rounded-3xl p-6 sm:p-10 space-y-6 border-2 border-kaaf-blue/40 shadow-web-card">
+                <h4 class="text-sm font-black text-white flex items-center gap-2">
+                    <i class="fa-solid fa-list-check text-kaaf-cyanLight"></i>
+                    <span>مشتملات ونطاق تنفيذ خدمة الموقع الإلكتروني:</span>
+                </h4>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xs text-gray-300">
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-blue/30 space-y-1.5">
+                        <div class="flex items-center gap-2 text-kaaf-cyanLight font-bold">
+                            <i class="fa-solid fa-server text-sm"></i>
+                            <span class="text-white text-xs">الدومين والاستضافة</span>
+                        </div>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">تجهيز وحجز اسم النطاق الرسمي (Domain) الخاص بالمؤسسة مع استضافة إلكترونية سريعة وآمنة.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-blue/30 space-y-1.5">
+                        <div class="flex items-center gap-2 text-kaaf-cyanLight font-bold">
+                            <i class="fa-solid fa-paintbrush text-sm"></i>
+                            <span class="text-white text-xs">تصميم وتطوير مستقل</span>
+                        </div>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">تصميم عصري يعكس فخامة واحترافية مكتب أحمد حجاج للشحن وطبيعة الخدمات اللوجستية المقدمة.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-blue/30 space-y-1.5">
+                        <div class="flex items-center gap-2 text-kaaf-cyanLight font-bold">
+                            <i class="fa-solid fa-sitemap text-sm"></i>
+                            <span class="text-white text-xs">تنظيم الصفحات والخدمات</span>
+                        </div>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">عرض خدمات الشحن والنقل البري والتخزين والتوريد بصورة واضحة تسهّل فهمها على مسؤولي الشركات.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-blue/30 space-y-1.5">
+                        <div class="flex items-center gap-2 text-kaaf-cyanLight font-bold">
+                            <i class="fa-solid fa-mobile-screen-button text-sm"></i>
+                            <span class="text-white text-xs">تجاوب كامل مع كافة الأجهزة</span>
+                        </div>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">تجربة تصفح مرنة وسلسة وسريعة الاستجابة على الهواتف الذكية والأجهزة اللوحية وأجهزة الكمبيوتر.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-blue/30 space-y-1.5">
+                        <div class="flex items-center gap-2 text-kaaf-cyanLight font-bold">
+                            <i class="fa-solid fa-envelope-open-text text-sm"></i>
+                            <span class="text-white text-xs">نماذج الاتصال وطلب العروض</span>
+                        </div>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">توفير وسائل التواصل المباشر ونماذج طلب تسعير الشحنات وربط أرقام الواتساب المعتمدة.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-blue/30 space-y-1.5">
+                        <div class="flex items-center gap-2 text-kaaf-cyanLight font-bold">
+                            <i class="fa-brands fa-google text-sm"></i>
+                            <span class="text-white text-xs">تهيئة SEO لمدة شهر</span>
+                        </div>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">بناء الأساس التقني للأرشفة، وضبط العناوين والأوصاف التوضيحية لتحسين الاكتشاف في محركات البحث.</p>
+                    </div>
+                </div>
+
+                <!-- Strategic Persuasion on Why an Independent Website Matters -->
+                <div class="p-5 rounded-2xl bg-black/50 border border-kaaf-blue/40 space-y-3">
+                    <span class="text-xs font-bold text-kaaf-cyanLight block flex items-center gap-2">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>ماذا يمنح الموقع الإلكتروني الرسمي مكتب أحمد حجاج للشحن؟</span>
+                    </span>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs text-gray-300">
+                        <div class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-check text-kaaf-cyanLight mt-0.5"></i>
+                            <span>واجهة رقمية رسمية تعكس قوة المؤسسة وقدرتها التشغيلية.</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-check text-kaaf-cyanLight mt-0.5"></i>
+                            <span>مساحة منظمة لشرح تفاصيل أسطول النقل ومناطق التغطية والضمانات.</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-check text-kaaf-cyanLight mt-0.5"></i>
+                            <span>تعزيز الثقة الفورية لدى مديري المشتريات وصناع القرار في الشركات.</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-check text-kaaf-cyanLight mt-0.5"></i>
+                            <span>أداة رسمية تُشارك بثقة أثناء الاجتماعات والمراسلات والعروض التجارية.</span>
+                        </div>
+                        <div class="flex items-start gap-2 sm:col-span-2">
+                            <i class="fa-solid fa-circle-check text-kaaf-cyanLight mt-0.5"></i>
+                            <span>نقطة استقبال مركزية وموثقة تستقبل طلبات التسعير والاستفسارات من العملاء الجادين.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SEO Realistic Clarification -->
+                <div class="p-4 rounded-2xl bg-kaaf-darkSlate/90 border border-white/10 text-xs text-gray-300 leading-relaxed flex items-start gap-3">
+                    <i class="fa-solid fa-circle-info text-kaaf-cyanLight text-base mt-0.5 shrink-0"></i>
+                    <div>
+                        <strong class="text-white block mb-0.5">إيضاح مهني بشأن تهيئة محركات البحث (SEO):</strong>
+                        تهدف خدمة تهيئة SEO لمدة شهر إلى بناء الأساس التقني والتنظيمي للموقع ليكون مهيئاً للفهرسة من قبل Google، وتحسين قابلية اكتشافه عند بحث الشركات عن خدمات الشحن والنقل. وتأكيداً على المصداقية، لا يقدم العرض أي ضمانات بترتيب محدد في نتائج البحث أو عدد زيارات معين لارتباط ذلك بخوارزميات خارجية وقدم النطاق والمنافسة المستمرة.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 03 — STEP TWO: DEDICATED SALES TEAM (3 MONTHS)                            -->
+        <!-- ========================================================================= -->
+        <section id="step-two" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full bg-kaaf-gold/30 text-kaaf-goldLight font-black text-xs border border-kaaf-gold/50 flex items-center gap-1.5">
+                    <i class="fa-solid fa-users-gear text-[11px]"></i>
+                    <span>الخطوة الثانية</span>
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide flex items-center gap-2.5">
+                    <i class="fa-solid fa-handshake text-kaaf-gold text-xl"></i>
+                    <span>التوسع التجاري من خلال فريق المبيعات المتخصص</span>
+                </h2>
+            </div>
+
+            <!-- Value Proposition & Transition Premise -->
+            <div class="web-card-gold rounded-3xl p-6 sm:p-10 space-y-6 border-2 border-kaaf-gold/40 shadow-glow-gold">
+                <div class="flex items-center gap-3 pb-3 border-b border-kaaf-gold/30 text-kaaf-goldLight font-bold text-sm">
+                    <div class="w-9 h-9 rounded-xl bg-kaaf-gold/20 flex items-center justify-center text-kaaf-gold">
+                        <i class="fa-solid fa-arrow-trend-up text-base"></i>
+                    </div>
+                    <span>الانتقال من الحضور الرقمي إلى التحرك الفعلي في السوق</span>
+                </div>
+
+                <p class="text-base sm:text-lg text-slate-200 leading-relaxed font-medium">
+                    إذا كان الموقع الإلكتروني يمنح المؤسسة الموثوقية والهيبة الرقمية، فإن <strong>فريق المبيعات المتخصص هو المحرك البشري الذي ينقل هذه القوة إلى أرض الواقع</strong>؛ عبر استهداف الشركات والمصانع ومستوردي البضائع، والتواصل المباشر مع مديري المشتريات والخدمات اللوجستية، وتحويل البيانات إلى فرص تعاقد ملموسة.
+                </p>
+
+                <div class="p-4 rounded-2xl bg-black/60 border border-kaaf-gold/40 text-xs sm:text-sm text-amber-100 font-medium leading-relaxed">
+                    «فريق المبيعات لدينا ليس مجرد أشخاص يجرون اتصالات عشوائية، بل فريق تجاري منظم يمتلك مهارات الإقناع والعرض المؤسسي وفهم طبيعة الشحن وسلاسل الإمداد، ويعمل على تخفيف العبء التشغيلي بالكامل عن صاحب المؤسسة».
+                </div>
+            </div>
+
+            <!-- Detailed 10 Sales Tasks Table -->
+            <div class="overflow-x-auto rounded-3xl border-2 border-kaaf-border shadow-web-card bg-kaaf-darkSlate/90 backdrop-blur-md">
+                <table class="w-full text-right text-xs sm:text-sm">
+                    <thead class="bg-kaaf-cardBg text-gray-200 border-b border-kaaf-border font-bold">
+                        <tr>
+                            <th class="p-4 w-12 text-center">#</th>
+                            <th class="p-4 w-1/3">المهمة التشغيلية لفريق المبيعات</th>
+                            <th class="p-4">إجراءات التنفيذ المتبعة لصالح مكتب أحمد حجاج للشحن</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-kaaf-border/60 text-gray-300">
+                        <tr class="hover:bg-kaaf-cardBg/60 transition">
+                            <td class="p-4 text-center font-mono text-kaaf-gold">01</td>
+                            <td class="p-4 font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-magnifying-glass text-kaaf-gold"></i>
+                                <span>دراسة النشاط وتحديد الشرائح</span>
+                            </td>
+                            <td class="p-4 text-gray-300 leading-relaxed">فهم خدمات الشحن التي يقدمها المكتب، ومسارات النقل المتاحة، والأسعار، وتحديد القطاعات التجارية الأكثر طلباً.</td>
+                        </tr>
+                        <tr class="hover:bg-kaaf-cardBg/60 transition">
+                            <td class="p-4 text-center font-mono text-kaaf-gold">02</td>
+                            <td class="p-4 font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-database text-kaaf-gold"></i>
+                                <span>إعداد قاعدة بيانات الشركات المحتملة</span>
+                            </td>
+                            <td class="p-4 text-gray-300 leading-relaxed">بناء وتجميع قوائم بيانات منظمة للشركات والمصانع ومتاجر التجزئة والتوريد التي تتطلب خدمات شحن دورية.</td>
+                        </tr>
+                        <tr class="hover:bg-kaaf-cardBg/60 transition">
+                            <td class="p-4 text-center font-mono text-kaaf-gold">03</td>
+                            <td class="p-4 font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-user-tie text-kaaf-gold"></i>
+                                <span>تحديد صناع القرار المعنيين</span>
+                            </td>
+                            <td class="p-4 text-gray-300 leading-relaxed">الوصول المباشر إلى مديري المشتريات، مسؤولي العمليات، ومديري سلاسل الإمداد المعنيين بإبرام العقود اللوجستية.</td>
+                        </tr>
+                        <tr class="hover:bg-kaaf-cardBg/60 transition">
+                            <td class="p-4 text-center font-mono text-kaaf-gold">04</td>
+                            <td class="p-4 font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-phone-volume text-kaaf-gold"></i>
+                                <span>التواصل الاحترافي المباشر</span>
+                            </td>
+                            <td class="p-4 text-gray-300 leading-relaxed">تنفيذ مكالمات ومراسلات أعمال منظمة ولبقة عبر القنوات المعتمدة لفتح قنوات تعاون تجارية مع الشركات.</td>
+                        </tr>
+                        <tr class="hover:bg-kaaf-cardBg/60 transition">
+                            <td class="p-4 text-center font-mono text-kaaf-gold">05</td>
+                            <td class="p-4 font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-id-card text-kaaf-gold"></i>
+                                <span>تقديم المؤسسة وخدماتها بصورة منظمة</span>
+                            </td>
+                            <td class="p-4 text-gray-300 leading-relaxed">استعراض إمكانيات مكتب أحمد حجاج للشحن وموثوقيته ومساراته، مع توظيف رابط الموقع الإلكتروني الجديد لتعزيز الثقة.</td>
+                        </tr>
+                        <tr class="hover:bg-kaaf-cardBg/60 transition">
+                            <td class="p-4 text-center font-mono text-kaaf-gold">06</td>
+                            <td class="p-4 font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-comments-dollar text-kaaf-gold"></i>
+                                <span>فهم احتياجات الشحن وفحص التوافق</span>
+                            </td>
+                            <td class="p-4 text-gray-300 leading-relaxed">تشخيص حجم بضائع العميل، وتكرار الشحنات، ووجهات النقل المطلوبة لتحديد مدى ملاءمتها لإمكانيات المكتب.</td>
+                        </tr>
+                        <tr class="hover:bg-kaaf-cardBg/60 transition">
+                            <td class="p-4 text-center font-mono text-kaaf-gold">07</td>
+                            <td class="p-4 font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-clock-rotate-left text-kaaf-gold"></i>
+                                <span>المتابعة الدورية للعملاء المهتمين</span>
+                            </td>
+                            <td class="p-4 text-gray-300 leading-relaxed">جدولة متابعات منتظمة مع كافة الجهات التي أبدت رغبة في التعاون، لضمان عدم تسرب أي فرصة تجارية.</td>
+                        </tr>
+                        <tr class="hover:bg-kaaf-cardBg/60 transition">
+                            <td class="p-4 text-center font-mono text-kaaf-gold">08</td>
+                            <td class="p-4 font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-calendar-check text-kaaf-gold"></i>
+                                <span>تنسيق الاجتماعات والمناقشات التجارية</span>
+                            </td>
+                            <td class="p-4 text-gray-300 leading-relaxed">ترتيب وتنسيق مواعيد الاجتماعات بين العملاء الجادين وإدارة مكتب أحمد حجاج للشحن لحسم الاتفاق النهائي.</td>
+                        </tr>
+                        <tr class="hover:bg-kaaf-cardBg/60 transition">
+                            <td class="p-4 text-center font-mono text-kaaf-gold">09</td>
+                            <td class="p-4 font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-handshake-angle text-kaaf-gold"></i>
+                                <span>متابعة فرص التعاقد والتفاوض الأولي</span>
+                            </td>
+                            <td class="p-4 text-gray-300 leading-relaxed">موافاة العملاء بالعروض السعرية المعتمدة، وتذليل الاستفسارات التمهيدية وتهيئة الفرصة للإغلاق التعاقدي.</td>
+                        </tr>
+                        <tr class="hover:bg-kaaf-cardBg/60 transition">
+                            <td class="p-4 text-center font-mono text-kaaf-gold">0A</td>
+                            <td class="p-4 font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-chart-pie text-kaaf-gold"></i>
+                                <span>تقارير أداء ومتابعة دورية</span>
+                            </td>
+                            <td class="p-4 text-gray-300 leading-relaxed">تزويد إدارة المؤسسة ببيانات مفصلة عن عدد الاتصالات، العملاء المؤهلين، والفرص المفتوحة ومسار التقدم.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Value & Management Role Clarification -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-gold/30 space-y-2">
+                    <span class="text-xs font-black text-kaaf-goldLight flex items-center gap-2">
+                        <i class="fa-solid fa-hand-holding-heart text-kaaf-gold"></i>
+                        تخفيف الأعباء التشغيلية عن الإدارة
+                    </span>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        تتولى KAAF بالكامل عمليات التنقيب، البحث، الاتصال الأولي، والتأهيل والمتابعة الروتينية المرهقة، ليتحرر وقت صاحب المؤسسة للتركيز على حركة الشاحنات والتشغيل اللوجستي وإدارة الأسطول.
+                    </p>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-gold/30 space-y-2">
+                    <span class="text-xs font-black text-kaaf-goldLight flex items-center gap-2">
+                        <i class="fa-solid fa-gavel text-kaaf-gold"></i>
+                        حصر القرارات والأسعار بإدارة المؤسسة
+                    </span>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        يبقى دور فريق المبيعات منحصراً في التواصل والتأهيل وترتيب الفرص؛ أما <strong>اعتماد الأسعار، إصدار عروض الأسعار النهائية، وتوقيع العقود اللوجستية</strong>، فيظل حصرياً بيد إدارة مكتب أحمد حجاج للشحن.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 04 — SALES MANAGEMENT, TRACKING & CRM PIPELINE                            -->
+        <!-- ========================================================================= -->
+        <section id="tracking" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full bg-kaaf-cyan/30 text-kaaf-cyanLight font-black text-xs border border-kaaf-cyan/50 flex items-center gap-1.5">
+                    <i class="fa-solid fa-gauge-high text-[11px]"></i>
+                    <span>آلية الرقابة والشفافية</span>
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide flex items-center gap-2.5">
+                    <i class="fa-solid fa-network-wired text-kaaf-cyanLight text-xl"></i>
+                    <span>آلية متابعة وإدارة فريق المبيعات (CRM & KPIs)</span>
+                </h2>
+            </div>
+
+            <div class="web-card-cyan rounded-3xl p-6 sm:p-10 space-y-6 border-2 border-kaaf-cyan/40 shadow-web-card">
+                <div class="flex items-center gap-3 pb-3 border-b border-kaaf-cyan/30 text-kaaf-cyanLight font-bold text-sm">
+                    <div class="w-9 h-9 rounded-xl bg-kaaf-cyan/20 flex items-center justify-center text-kaaf-cyan">
+                        <i class="fa-solid fa-chart-column text-base"></i>
+                    </div>
+                    <span>إدارة واضحة وشفافة ترتكز على التوثيق المستمر</span>
+                </div>
+
+                <p class="text-sm sm:text-base text-slate-200 leading-relaxed font-medium">
+                    تضمن KAAF أن تسير أنشطة المبيعات وفق أعلى معايير الشفافية والتنظيم؛ حيث تتم إدارة العمليات عبر نظام متابعة وCRM منظم يوثق مسار كل عميل وفرصة:
+                </p>
+
+                <!-- 9 Control Protocols Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs text-gray-300">
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-cyan/30 space-y-1.5">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-bullseye text-kaaf-cyan"></i> تحديد الأهداف ومؤشرات الأداء</span>
+                        <p class="text-[11px] text-gray-400">الاتفاق مع إدارة المؤسسة على مستهدفات العمل وتحديد أولويات القطاعات المستهدفة قبل بدء الاتصال.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-cyan/30 space-y-1.5">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-table-list text-kaaf-cyan"></i> إعداد قاعدة بيانات العملاء</span>
+                        <p class="text-[11px] text-gray-400">حصر الشركات والمصانع وبيانات التواصل الرسمية لمسؤولي المشتريات والخدمات اللوجستية.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-cyan/30 space-y-1.5">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-laptop-file text-kaaf-cyan"></i> تسجيل وتوثيق الفرص بالـ CRM</span>
+                        <p class="text-[11px] text-gray-400">أرشفة تفاصيل كل عميل وتوثيق نتائج المحادثات وتحديد موعد الاتصال القادم بدقة.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-cyan/30 space-y-1.5">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-filter text-kaaf-cyan"></i> تصنيف العملاء حسب الجاهزية</span>
+                        <p class="text-[11px] text-gray-400">فرز العملاء طبقاً لمستوى الاهتمام والجدية (جاهز للتعاقد، يحتاج عروض، مؤجل لمشروع لاحق).</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-cyan/30 space-y-1.5">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-clock-rotate-left text-kaaf-cyan"></i> بروتوكول المتابعة المنتظمة</span>
+                        <p class="text-[11px] text-gray-400">معاودة التواصل المبرمج مع العملاء المهتمين لضمان بقاء عروض المؤسسة حاضرة لدى صانع القرار.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-cyan/30 space-y-1.5">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass-chart text-kaaf-cyan"></i> المراجعة الدورية للأداء</span>
+                        <p class="text-[11px] text-gray-400">جلسات تقييم مستمرة لقياس مردود التواصل وتعديل أسلوب الاستهداف طبقاً لتفاعل الميدان.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-cyan/30 space-y-1.5">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-file-invoice text-kaaf-cyan"></i> تقارير أداء دورية للإدارة</span>
+                        <p class="text-[11px] text-gray-400">تقديم تقارير توضح حجم النشاط، المكالمات، نسب الاستجابة، والفرص المتاحة لإغلاق الصفقات.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-cyan/30 space-y-1.5 sm:col-span-2">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-handshake text-kaaf-cyan"></i> التنسيق المستمر لتطوير الاستهداف</span>
+                        <p class="text-[11px] text-gray-400">تواصل مباشر وتنسيق مرن مع إدارة مكتب أحمد حجاج للشحن لتوجيه الفريق نحو القطاعات والمناطق الأكثر ربحية.</p>
+                    </div>
+                </div>
+
+                <!-- Proposed KPIs Matrix -->
+                <div class="p-5 rounded-2xl bg-black/50 border border-kaaf-cyan/30 space-y-3">
+                    <span class="text-xs font-bold text-white block">مؤشرات الأداء المقترحة لمتابعة فريق المبيعات (KPIs):</span>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5 text-center text-xs">
+                        <div class="p-2.5 rounded-xl bg-kaaf-darkSlate border border-white/5 space-y-1">
+                            <span class="text-kaaf-cyanLight font-bold text-[10px] block">القاعدة المستهدفة</span>
+                            <span class="font-bold text-white text-[11px]">عدد العملاء المضافين</span>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-kaaf-darkSlate border border-white/5 space-y-1">
+                            <span class="text-kaaf-cyanLight font-bold text-[10px] block">كثافة النشاط</span>
+                            <span class="font-bold text-white text-[11px]">محاولات التواصل</span>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-kaaf-darkSlate border border-white/5 space-y-1">
+                            <span class="text-kaaf-cyanLight font-bold text-[10px] block">معدل الوصول</span>
+                            <span class="font-bold text-white text-[11px]">العملاء الواصل إليهم</span>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-kaaf-darkSlate border border-white/5 space-y-1">
+                            <span class="text-kaaf-cyanLight font-bold text-[10px] block">جودة الفرص</span>
+                            <span class="font-bold text-white text-[11px]">العملاء المؤهلين</span>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-kaaf-darkSlate border border-white/5 space-y-1">
+                            <span class="text-kaaf-cyanLight font-bold text-[10px] block">المواعيد المنجزة</span>
+                            <span class="font-bold text-white text-[11px]">الاجتماعات المجدولة</span>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-kaaf-darkSlate border border-white/5 space-y-1">
+                            <span class="text-kaaf-cyanLight font-bold text-[10px] block">مسار الصفقات</span>
+                            <span class="font-bold text-white text-[11px]">التقدم نحو التعاقد</span>
+                        </div>
+                    </div>
+                    <p class="text-[11px] text-gray-400 text-center">
+                        * يتم تحديد مستهدفات الأداء الرقمية الدقيقة بالتنسيق والاتفاق المشترك مع إدارة المؤسسة وفق طاقة العمل وطبيعة السوق.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 05 — INTEGRATION & SYNERGY: THE COMPLETE LOGISTICS FUNNEL                 -->
+        <!-- ========================================================================= -->
+        <section id="synergy" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full bg-kaaf-gold/30 text-kaaf-goldLight font-black text-xs border border-kaaf-gold/50 flex items-center gap-1.5">
+                    <i class="fa-solid fa-arrows-split-up-and-left text-[11px]"></i>
+                    <span>تكامل الخدمات الثلاث</span>
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide flex items-center gap-2.5">
+                    <i class="fa-solid fa-cubes-stacked text-kaaf-gold text-xl"></i>
+                    <span>التكامل بين الموقع الإلكتروني و SEO وفريق المبيعات</span>
+                </h2>
+            </div>
+
+            <div class="web-card-gold rounded-3xl p-6 sm:p-10 space-y-8 border-2 border-kaaf-gold/40 shadow-glow-gold">
+                <div class="text-center max-w-3xl mx-auto space-y-2">
+                    <h3 class="text-xl sm:text-2xl font-black text-white font-ibm">
+                        منظومة واحدة متكاملة تساند بعضها البعض
+                    </h3>
+                    <p class="text-xs sm:text-sm text-gray-300 leading-relaxed font-medium">
+                        الخدمات الثلاث لا تعمل في جزر منعزلة؛ بل تشكل حلقة تجارية متكاملة؛ فالموقع الإلكتروني يُعد الأداة الداعمة الأساسية لفريق المبيعات أثناء التواصل مع مديري المشتريات، مما يرفع معدلات الثقة والتحويل.
+                    </p>
+                </div>
+
+                <!-- Triad Roles Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+                    <!-- Website -->
+                    <div class="p-6 rounded-2xl bg-kaaf-darkSlate/95 border-2 border-kaaf-cyan/50 text-center space-y-3 shadow-lg flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <div class="w-12 h-12 rounded-2xl bg-kaaf-blue/30 text-kaaf-cyanLight flex items-center justify-center mx-auto text-xl border border-kaaf-blue/50">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+                            <h4 class="text-base font-black text-white font-ibm">الموقع الإلكتروني</h4>
+                            <div class="text-xs text-kaaf-cyanLight font-bold">بناء الثقة والواجهة الرسمية</div>
+                            <p class="text-xs text-gray-300 leading-relaxed">
+                                يمنح المؤسسة كياناً رقمياً ثابتاً ورسمياً يعرض خدمات الشحن ومناطق التغطية والضمانات أمام أصحاب الشركات وصناع القرار.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-white/10 text-[11px] text-kaaf-cyanLight font-mono">Credibility & Digital Anchor</div>
+                    </div>
+
+                    <!-- SEO -->
+                    <div class="p-6 rounded-2xl bg-kaaf-darkSlate/95 border-2 border-kaaf-purple/50 text-center space-y-3 shadow-lg flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <div class="w-12 h-12 rounded-2xl bg-kaaf-purple/30 text-kaaf-purpleLight flex items-center justify-center mx-auto text-xl border border-kaaf-purple/50">
+                                <i class="fa-brands fa-google"></i>
+                            </div>
+                            <h4 class="text-base font-black text-white font-ibm">تحسين محركات البحث SEO</h4>
+                            <div class="text-xs text-kaaf-purpleLight font-bold">قابلية الاكتشاف التلقائي</div>
+                            <p class="text-xs text-gray-300 leading-relaxed">
+                                يعزز فرص ظهور الموقع عند بحث مديري العمليات والشركات في Google عن خدمات الشحن والنقل اللوجستي ذات الصلة.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-white/10 text-[11px] text-kaaf-purpleLight font-mono">Inbound Discovery & Search</div>
+                    </div>
+
+                    <!-- Sales Team -->
+                    <div class="p-6 rounded-2xl bg-kaaf-darkSlate/95 border-2 border-kaaf-gold/60 text-center space-y-3 shadow-lg flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <div class="w-12 h-12 rounded-2xl bg-kaaf-gold/20 text-kaaf-gold flex items-center justify-center mx-auto text-xl border border-kaaf-gold/40">
+                                <i class="fa-solid fa-users-gear"></i>
+                            </div>
+                            <h4 class="text-base font-black text-white font-ibm">فريق المبيعات المتخصص</h4>
+                            <div class="text-xs text-kaaf-gold font-bold">المبادرة واقتناص العقود</div>
+                            <p class="text-xs text-gray-300 leading-relaxed">
+                                يتحرك مباشرة لاستهداف المصانع والشركات، مستنداً إلى رابط الموقع كدليل مصداقية، ويقود العميل حتى إبرام التعاقد.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-white/10 text-[11px] text-kaaf-gold font-mono">Outbound Sales & Deals</div>
+                    </div>
+                </div>
+
+                <!-- Step-by-Step Customer Journey (7 Steps) -->
+                <div class="p-6 rounded-2xl bg-black/75 border border-white/10 space-y-4">
+                    <span class="text-xs font-bold text-kaaf-goldLight block text-center">رحلة العميل داخل المنظومة (Customer Journey Architecture):</span>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2.5 text-center text-xs">
+                        <div class="p-2.5 rounded-xl bg-kaaf-darkSlate border border-white/5 space-y-1">
+                            <span class="font-bold text-white block text-[11px]">1. الظهور الرقمي</span>
+                            <p class="text-[10px] text-gray-400">عبر الويب ومحركات البحث.</p>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-kaaf-darkSlate border border-white/5 space-y-1">
+                            <span class="font-bold text-white block text-[11px]">2. مراجعة الموقع</span>
+                            <p class="text-[10px] text-gray-400">فحص الخدمات وإمكانيات المكتب.</p>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-kaaf-darkSlate border border-white/5 space-y-1">
+                            <span class="font-bold text-white block text-[11px]">3. بناء الثقة</span>
+                            <p class="text-[10px] text-gray-400">التأكد من رسمية واحترافية الكيان.</p>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-kaaf-darkSlate border border-white/5 space-y-1">
+                            <span class="font-bold text-white block text-[11px]">4. تواصل المبيعات</span>
+                            <p class="text-[10px] text-gray-400">اتصال مهني ومشاركة الرابط الرسمي.</p>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-kaaf-darkSlate border border-white/5 space-y-1">
+                            <span class="font-bold text-white block text-[11px]">5. تأهيل الاحتياج</span>
+                            <p class="text-[10px] text-gray-400">فحص متطلبات الشحنات والمسارات.</p>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-kaaf-darkSlate border border-white/5 space-y-1">
+                            <span class="font-bold text-white block text-[11px]">6. الاجتماع التجاري</span>
+                            <p class="text-[10px] text-gray-400">مناقشة العرض مع الإدارة.</p>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-kaaf-darkSlate border border-emerald-500/40 space-y-1 bg-emerald-950/20 col-span-2 sm:col-span-1">
+                            <span class="font-bold text-emerald-400 block text-[11px]">7. إبرام التعاقد</span>
+                            <p class="text-[10px] text-gray-300">توقيع عقد الشحن والنقل الدوري.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 06 — GUARANTEES & OPERATIONAL COMMITMENTS                                  -->
+        <!-- ========================================================================= -->
+        <section id="guarantees" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full bg-emerald-950 text-emerald-400 font-black text-xs border border-emerald-500/40 flex items-center gap-1.5">
+                    <i class="fa-solid fa-shield-check text-[11px]"></i>
+                    <span>الضمانات والالتزامات</span>
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide flex items-center gap-2.5">
+                    <i class="fa-solid fa-certificate text-emerald-400 text-xl"></i>
+                    <span>التزامنا بالجودة والشفافية (Service Guarantees)</span>
+                </h2>
+            </div>
+
+            <div class="relative overflow-hidden rounded-3xl p-8 sm:p-12 bg-gradient-to-br from-kaaf-greenDeep via-kaaf-darkSlate to-kaaf-cardBg border-2 border-emerald-400 shadow-glow-green space-y-8">
+                <div class="kaaf-ribbon absolute top-0 left-0 right-0"></div>
+
+                <div class="max-w-3xl space-y-2">
+                    <h3 class="text-xl sm:text-2xl font-black text-white font-ibm">التزام مؤسسي واضح يضمن حقوق مكتب أحمد حجاج للشحن</h3>
+                    <p class="text-xs sm:text-sm text-emerald-100/90 leading-relaxed font-medium">
+                        نحرص في KAAF على أن تكون آلية التعاون واضحة وموثقة في كل خطوة، مع بيان حدود المسؤولية والضمانات الفنية والتشغيلية المعتمدة:
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    <!-- Website Guarantees -->
+                    <div class="p-6 rounded-2xl bg-black/75 border border-cyan-500/40 space-y-3">
+                        <div class="flex items-center gap-2 text-kaaf-cyanLight font-bold text-sm pb-2 border-b border-white/10">
+                            <i class="fa-solid fa-laptop-code text-base"></i>
+                            <h4 class="text-white font-black text-sm">ضمانات الموقع الإلكتروني و SEO:</h4>
+                        </div>
+                        <ul class="space-y-2 text-xs text-gray-300 leading-relaxed">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>تسليم الموقع بعد مراجعته واختباره وتدقيق عمل كافة الصفحات.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>التأكد من فاعلية نماذج الاتصال والروابط وأرقام الواتساب المعتمدة.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>تسليم بيانات الدومين والاستضافة وصلاحيات لوحة التحكم بالكامل للمؤسسة.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>توضيح مدد حجز الدومين والاستضافة المتفق عليها صراحة في العقد.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>توفير فترة دعم فني لمعالجة أي أخطاء برمجية متعلقة بالتنفيذ بعد التسليم.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>تقديم تقرير فني يوضح ما تم تنفيذه في تهيئة الـ SEO الأساسية خلال الشهر.</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Sales Team Guarantees -->
+                    <div class="p-6 rounded-2xl bg-black/75 border border-kaaf-gold/40 space-y-3">
+                        <div class="flex items-center gap-2 text-kaaf-gold font-bold text-sm pb-2 border-b border-white/10">
+                            <i class="fa-solid fa-users-gear text-base"></i>
+                            <h4 class="text-white font-black text-sm">ضمانات فريق المبيعات المتخصص:</h4>
+                        </div>
+                        <ul class="space-y-2 text-xs text-gray-300 leading-relaxed">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-kaaf-gold mt-0.5"></i> <span>وضوح تام لنطاق العمل والمهام والقطاعات المستهدفة قبل بدء الاشتراك.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-kaaf-gold mt-0.5"></i> <span>آلية موثقة ومحدثة لتسجيل بيانات العملاء ومتابعة الصفقات بالـ CRM.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-kaaf-gold mt-0.5"></i> <span>تقارير دورية قياسية توضح محاولات التواصل والنتائج المحققة بشفافية.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-kaaf-gold mt-0.5"></i> <span>جلسات مراجعة وتنسيق دورية لمناقشة تطوير أساليب الاستهداف مع الإدارة.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-kaaf-gold mt-0.5"></i> <span>التزام صارم بالحفاظ على سرية بيانات المؤسسة وأسعارها وسجلات عملائها.</span></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- Professional Transparency Disclaimer -->
+                <div class="p-4 rounded-2xl bg-black/80 border border-emerald-500/30 text-xs text-slate-300 flex items-start gap-3">
+                    <i class="fa-solid fa-circle-exclamation text-emerald-400 text-base mt-0.5 shrink-0"></i>
+                    <p class="leading-relaxed">
+                        <strong>إيضاح مهني بشأن المبيعات والتعاقدات:</strong> ينصب التزام KAAF على بذل أقصى عناية مهنية متخصصة وتشغيل المنظومة باحترافية وتأهيل الفرص؛ وتأكيداً على النزاهة والمصداقية، <strong>لا يقدم العرض أي وعود بضمان عدد تعاقدات أو مبيعات محددة</strong>، نظراً لأن النتائج البيعية النهائية ترتبط بعوامل تسعيرية وتشغيلية تعود للشركة وتنافسية عروضها وتجاوب السوق.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 07 — ALIGNMENT WITH SAUDI VISION 2030 (LOGISTICS HUB)                     -->
+        <!-- ========================================================================= -->
+        <section id="vision2030" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full bg-kaaf-green/30 text-kaaf-greenLight font-black text-xs border border-kaaf-green/50 flex items-center gap-1.5">
+                    <i class="fa-solid fa-flag text-[11px]"></i>
+                    <span>رؤية المملكة 2030</span>
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide flex items-center gap-2.5">
+                    <i class="fa-solid fa-landmark text-kaaf-greenLight text-xl"></i>
+                    <span>رؤية المملكة العربية السعودية 2030 والتحول اللوجستي</span>
+                </h2>
+            </div>
+
+            <div class="web-card-green rounded-3xl p-6 sm:p-10 space-y-6 border-2 border-kaaf-green/40 shadow-glow-green">
+                <div class="flex items-center gap-3 pb-3 border-b border-kaaf-green/30 text-kaaf-greenLight font-bold text-sm">
+                    <div class="w-9 h-9 rounded-xl bg-kaaf-green/20 flex items-center justify-center text-kaaf-greenLight">
+                        <i class="fa-solid fa-truck-moving text-base"></i>
+                    </div>
+                    <span>المملكة كمركز لوجستي عالمي: فرصة تاريخية لتوسع شركات الشحن الوطنية</span>
+                </div>
+
+                <p class="text-base sm:text-lg text-slate-200 leading-relaxed font-medium">
+                    يحظى قطاع النقل والخدمات اللوجستية باهتمام استثنائي ضمن <strong>رؤية السعودية 2030</strong> من خلال الاستراتيجية الوطنية للنقل والخدمات اللوجستية، التي تستهدف ترسيخ مكانة المملكة كمركز لوجستي عالمي يربط القارات الثلاث، ورفع كفاءة سلاسل الإمداد، وتعزيز الاعتماد على الحلول الرقمية والتقنيات الحديثة في تتبع وتنسيق الشحنات.
+                </p>
+
+                <div class="p-5 rounded-2xl bg-black/60 border border-emerald-500/30 text-xs sm:text-sm text-emerald-200 leading-relaxed font-medium">
+                    «إن تطوير مكتب أحمد حجاج للشحن بحصوله على واجهة رقمية رسمية وتفعيل فريق مبيعات نشط هو مواءمة تجارية ذكية مع التوجه الاقتصادي العام بالمملكة؛ مما يؤهل المؤسسة لتكون شريكاً معتمداً للشركات والمصانع التي تشهد توسعاً غير مسبوق في عمليات النقل والتوريد».
+                </div>
+
+                <!-- Strategic Alignment Points Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs text-gray-300">
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-green/30 space-y-1.5">
+                        <span class="font-bold text-white block">مواكبة تطور القطاع اللوجستي</span>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">الارتقاء بالظهور المؤسسي بما يطابق معايير الاحترافية المعتمدة في سلاسل الإمداد الحديثة.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-green/30 space-y-1.5">
+                        <span class="font-bold text-white block">صورة احترافية أمام الشركات</span>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">بناء انطباع رسمي يعزز الثقة لدى الشركات الوطنية الكبرى والجهات التجارية الباحثة عن ناقل معتمد.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-green/30 space-y-1.5">
+                        <span class="font-bold text-white block">توسيع نطاق الشركاء</span>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">فتح آفاق التعاقد مع الموردين والموزعين والمصانع التي تحتاج إلى عقود نقل وشحن دورية ومستقرة.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-green/30 space-y-1.5">
+                        <span class="font-bold text-white block">تطوير آليات التواصل والمبيعات</span>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">الانتقال من التنسيق الفردي إلى إدارة مبيعات مؤسسية تستخدم قنوات رقمية وأنظمة متابعة متطورة.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-green/30 space-y-1.5 md:col-span-2">
+                        <span class="font-bold text-white block">الاستفادة من التحول الرقمي</span>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">استثمار الحضور على الإنترنت ومحركات البحث ليكون أصلاً تجارياً مستداماً يغذي المؤسسة بطلبات الشحن باستمرار.</p>
+                    </div>
+                </div>
+
+                <div class="p-3.5 rounded-xl bg-black/40 border border-white/10 text-xs text-gray-400 text-center">
+                    * إيضاح تنظيمي: يُعرض هذا الربط كفرصة استراتيجية للاستفادة من النمو الاقتصادي والتجاري المتسارع في المملكة، دون الإيحاء بوجود شراكة حكومية رسمية مباشرة لم تثبت مستندياً.
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 08 — COMMERCIAL PROPOSAL & INVESTMENT STRUCTURE                           -->
+        <!-- ========================================================================= -->
+        <section id="pricing" class="space-y-8">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-kaaf-gold/20 border border-kaaf-gold/50 text-kaaf-goldLight text-xs font-black">
+                    <i class="fa-solid fa-file-invoice-dollar text-kaaf-gold"></i>
+                    <span>العرض المالي والاستثمار المقترح</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">خيارات الاستثمار وهيكل الباقات المعتمدة</h2>
+                <p class="text-xs sm:text-sm text-gray-300">تسعير شفاف يوضح تكلفة كل خطوة مع إبراز باقة الـ 3 أشهر الأكثر توصية وقيمة</p>
+            </div>
+
+            <!-- Grand Total Investment Banner (Step 1 + Step 2 for 3 Months) -->
+            <div class="relative overflow-hidden rounded-3xl p-8 sm:p-12 bg-gradient-to-br from-kaaf-blueDeep via-kaaf-darkSlate to-kaaf-cardBg border-2 border-kaaf-gold shadow-glow-gold backdrop-blur-xl">
+                <div class="kaaf-ribbon absolute top-0 left-0 right-0"></div>
+
+                <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+                    <div class="space-y-4 text-center lg:text-right">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-kaaf-gold/20 border border-kaaf-gold/50 text-kaaf-goldLight text-xs font-black">
+                            <i class="fa-solid fa-crown text-kaaf-gold"></i>
+                            <span>الخيار الاستراتيجي الموصى به لمكتب أحمد حجاج للشحن</span>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-black text-white font-ibm">
+                            المشروع المتكامل: الخطوة الأولى (الموقع) + الخطوة الثانية (المبيعات 3 أشهر)
+                        </h3>
+                        <p class="text-xs sm:text-sm text-gray-200 max-w-xl leading-relaxed font-medium">
+                            يشمل تأسيس الموقع الإلكتروني المستقل مع الدومين والاستضافة وتهيئة SEO لمدة شهر (3,000 ريال) + تشغيل فريق مبيعات متخصص لمدة 3 أشهر كاملة بخصم ترويجي خاص (12,000 ريال بدلاً من 15,000 ريال).
+                        </p>
+                        <div class="text-xs text-emerald-300 font-bold flex items-center gap-2 justify-center lg:justify-start">
+                            <i class="fa-solid fa-badge-percent text-base"></i>
+                            <span>توفير 3,000 ريال سعودي على باقة فريق المبيعات للـ 3 أشهر</span>
+                        </div>
+                    </div>
+
+                    <!-- Highlighted Total Box -->
+                    <div class="shrink-0 text-center bg-black/85 border-2 border-kaaf-gold rounded-3xl p-6 sm:p-8 shadow-2xl min-w-[280px]">
+                        <span class="text-xs font-bold text-gray-400 block mb-1">إجمالي الاستثمار الشامل للخطوتين</span>
+                        <div class="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-kaaf-goldLight via-yellow-200 to-kaaf-gold font-ibm tracking-tight">
+                            15,000 <span class="text-2xl sm:text-3xl text-kaaf-gold font-cairo">SAR</span>
+                        </div>
+                        <span class="inline-block mt-2 px-3.5 py-0.5 rounded-full bg-kaaf-gold/20 text-kaaf-goldLight text-xs font-black border border-kaaf-gold/40">
+                            فقط خمسة عشر ألف ريال سعودي لا غير
+                        </span>
+                        <div class="mt-2 text-[11px] text-gray-400">
+                            (3,000 للموقع + 12,000 للمبيعات 3 أشهر)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Breakdown Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- Step 1 Card -->
+                <div class="web-card-blue p-6 sm:p-8 rounded-3xl flex flex-col justify-between space-y-6 shadow-web-card border-t-4 border-t-kaaf-cyan">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-kaaf-cyanLight font-ibm uppercase tracking-wider">الخطوة الأولى</span>
+                            <span class="px-2.5 py-1 rounded-full bg-kaaf-blue/40 text-kaaf-cyanLight text-xs font-bold border border-kaaf-blue/50">تأسيس رقمي</span>
+                        </div>
+                        <h3 class="text-xl font-black text-white">تأسيس الموقع الإلكتروني و SEO</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            بناء واجهة رقمية رسمية تعكس موثوقية المؤسسة وخدماتها اللوجستية وتستقبل طلبات الشركات.
+                        </p>
+                        <ul class="space-y-2 text-xs text-gray-300">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-kaaf-cyanLight"></i> <span>إنشاء وتطوير موقع إلكتروني مستقل.</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-kaaf-cyanLight"></i> <span>تجهيز وحجز الدومين والاستضافة.</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-kaaf-cyanLight"></i> <span>تهيئة محركات البحث SEO لمدة شهر.</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-6 border-t border-kaaf-blue/40 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-gray-400 block">السعر الإجمالي</span>
+                            <div class="text-2xl font-black text-white font-ibm">3,000 <span class="text-sm text-kaaf-cyanLight font-cairo">ريال</span></div>
+                        </div>
+                        <span class="text-xs px-3 py-1 rounded-xl bg-kaaf-blue/40 text-kaaf-cyanLight font-bold border border-kaaf-blue/60">3,000 ريال سعودي</span>
+                    </div>
+                </div>
+
+                <!-- Step 2 - Option 1: Monthly Sales -->
+                <div class="web-card-blue p-6 sm:p-8 rounded-3xl flex flex-col justify-between space-y-6 shadow-web-card border-t-4 border-t-kaaf-blueLight">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-gray-400 font-ibm uppercase tracking-wider">الخطوة الثانية (خيار 1)</span>
+                            <span class="px-2.5 py-1 rounded-full bg-kaaf-blue/40 text-gray-300 text-xs font-bold border border-white/10">شهر واحد</span>
+                        </div>
+                        <h3 class="text-xl font-black text-white">فريق مبيعات (اشتراك شهر)</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            تشغيل فريق مبيعات متخصص للتواصل مع العملاء والشركات وتأهيل الفرص لمدة شهر واحد.
+                        </p>
+                        <ul class="space-y-2 text-xs text-gray-300">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-kaaf-cyanLight"></i> <span>بناء قاعدة البيانات الأولية.</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-kaaf-cyanLight"></i> <span>التواصل والتأهيل وحجز المواعيد.</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-kaaf-cyanLight"></i> <span>تقارير متابعة دورية عن الأداء.</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-6 border-t border-kaaf-blue/40 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-gray-400 block">سعر الشهر الفردي</span>
+                            <div class="text-2xl font-black text-white font-ibm">5,000 <span class="text-sm text-kaaf-cyanLight font-cairo">ريال</span></div>
+                        </div>
+                        <span class="text-xs px-3 py-1 rounded-xl bg-kaaf-blue/40 text-gray-300 font-bold border border-kaaf-blue/60">5,000 ريال سعودي</span>
+                    </div>
+                </div>
+
+                <!-- Step 2 - Option 2: 3 Months Sales (Recommended) -->
+                <div class="web-card-gold p-6 sm:p-8 rounded-3xl flex flex-col justify-between space-y-6 shadow-glow-gold border-2 border-kaaf-gold relative overflow-hidden">
+                    <div class="absolute top-3 left-3">
+                        <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-black border border-emerald-500/40">
+                            الأكثر توصية وقيمة
+                        </span>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-kaaf-goldLight font-ibm uppercase tracking-wider">الخطوة الثانية (خيار 2)</span>
+                            <span class="px-2.5 py-1 rounded-full bg-kaaf-gold/20 text-kaaf-goldLight text-xs font-black border border-kaaf-gold/40">3 أشهر كاملة</span>
+                        </div>
+                        <h3 class="text-xl font-black text-white">فريق مبيعات (اشتراك 3 أشهر)</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            الفترة الأنسب لبناء علاقات تعاقدية ممتدة مع كبار الموردين والمصانع وتراكم الفرص اللوجستية.
+                        </p>
+                        <div class="text-xs text-emerald-400 font-bold">
+                            وفر 3,000 ريال سعودي مقارنة بالاشتراك الشهري المنفصل!
+                        </div>
+                        <ul class="space-y-2 text-xs text-gray-300">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-kaaf-gold"></i> <span>فريق مبيعات متفرغ لمدة 3 أشهر.</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-kaaf-gold"></i> <span>توسيع مستمر لقاعدة العملاء والشركات.</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-kaaf-gold"></i> <span>إدارة مسار المبيعات بالكامل عبر CRM.</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-6 border-t border-kaaf-gold/40 flex items-center justify-between">
+                        <div>
+                            <span class="text-[11px] text-gray-400 line-through block">15,000 ريال قبل الخصم</span>
+                            <div class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-kaaf-goldLight via-yellow-200 to-kaaf-gold font-ibm">12,000 <span class="text-sm text-kaaf-gold font-cairo">ريال</span></div>
+                        </div>
+                        <span class="text-xs px-3 py-1 rounded-xl bg-kaaf-gold/20 text-kaaf-gold font-bold border border-kaaf-gold/50">12,000 ريال سعودي</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Financial Clarity Disclaimers -->
+            <div class="p-5 rounded-2xl bg-kaaf-darkSlate/90 border border-kaaf-border text-xs text-slate-300 space-y-2">
+                <div class="flex items-center gap-2 text-kaaf-cyanLight font-bold">
+                    <i class="fa-solid fa-circle-info text-base"></i>
+                    <span>محددات الشفافية المالية والتعاقدية:</span>
+                </div>
+                <ul class="list-disc list-inside space-y-1 text-gray-300">
+                    <li>الأسعار الموضحة أعلاه تمثل إجمالي تكلفة المدد المحددة للخدمات، وهي مبالغ صافية للباقات دون إضافة أي رسوم غير مذكورة.</li>
+                    <li>تُترك تفاصيل جداول السداد والترتيبات الإجرائية للاتفاق المتبادل عند توقيع الاتفاقية النهائية.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 09 — CONCLUSION & CALL TO ACTION                                          -->
+        <!-- ========================================================================= -->
+        <section id="conclusion" class="relative rounded-[32px] overflow-hidden p-8 sm:p-14 bg-gradient-to-br from-kaaf-blueDeep via-kaaf-darkSlate to-kaaf-dark border border-kaaf-gold/40 text-center space-y-8 shadow-web-card">
+            <div class="kaaf-ribbon absolute top-0 left-0 right-0"></div>
+
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="w-16 h-16 rounded-2xl overflow-hidden border-2 border-kaaf-gold shadow-glow-gold mx-auto p-0.5 bg-black">
+                    <img src="https://i.ibb.co/qLQcG9vr/Whats-App-Image-2026-08-26-at-11-29-58.jpg" alt="KAAF Group Logo" class="w-full h-full object-cover rounded-xl" onerror="this.src='https://placehold.co/100x100/0A4C86/ffffff?text=KAAF'">
+                </div>
+
+                <span class="text-xs font-bold text-kaaf-cyanLight font-mono uppercase tracking-widest block">KAAF Group × Ahmed Haggag Shipping • Strategic Partnership</span>
+
+                <h3 class="text-2xl sm:text-4xl font-black text-white leading-tight">
+                    خاتمة العرض والدعوة إلى بدء مرحلة النمو اللوجستي
+                </h3>
+
+                <p class="text-sm sm:text-base text-gray-200 leading-relaxed font-medium">
+                    إن هدف <strong>KAAF Group</strong> من هذه الشراكة الاستشارية لا يقتصر على مجرد بناء موقع إلكتروني أو تشغيل اتصالات مبيعات روتينية؛ بل يتمثل في <strong>بناء أساس مؤسسي راسخ يساعد مكتب أحمد حجاج للشحن على تقديم خدماته اللوجستية بثقة عالية، والوصول المنظم إلى كبرى الشركات والمصانع، وتطوير فرص التعاقد المستمر</strong>.
+                </p>
+
+                <!-- Core Concluding Slogan -->
+                <div class="p-4 rounded-2xl bg-black/75 border-2 border-kaaf-gold/60 text-kaaf-goldLight font-bold text-sm sm:text-base leading-relaxed shadow-lg max-w-2xl mx-auto">
+                    «ابدأ ببناء حضورك الرقمي الموثوق، ثم حوّل هذا الحضور إلى فرص تجارية وتعاقدات فعلية من خلال فريق مبيعات متخصص».
+                </div>
+
+                <div class="pt-2 text-lg sm:text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-kaaf-goldLight via-yellow-200 to-kaaf-gold font-ibm">
+                    KAAF Group – شريككم في بناء الحضور الرقمي وتحقيق النمو التجاري.
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://wa.me/966537553910" target="_blank" class="px-8 py-3.5 rounded-2xl bg-gradient-to-r from-kaaf-gold to-kaaf-amber text-slate-950 font-black text-xs shadow-xl flex items-center gap-2 hover:brightness-110 transition">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>مناقشة بدء العمل وتأكيد اعتماد الخطة المتكاملة</span>
+                </a>
+                <a href="https://kaafmarketing.sa/" target="_blank" class="px-6 py-3.5 rounded-2xl bg-kaaf-dark border border-kaaf-border text-white font-bold text-xs hover:border-kaaf-cyan transition flex items-center gap-2">
+                    <i class="fa-solid fa-globe text-kaaf-cyanLight"></i>
+                    <span>الموقع الرسمي: kaafmarketing.sa</span>
+                </a>
+            </div>
+
+            <!-- Formal Signatures Box -->
+            <div class="pt-8 border-t border-white/10 grid grid-cols-1 md:grid-cols-2 gap-6 text-right text-xs text-gray-400">
+                <div class="space-y-1">
+                    <span class="text-white font-bold block text-sm">مقدم العرض:</span>
+                    <p class="text-gray-300 font-bold">KAAF Group for Marketing, Software & Media Solutions</p>
+                    <p>مجموعة كاف لحلول التسويق والبرمجيات والحلول الإعلامية</p>
+                    <p class="font-mono text-gray-500">المملكة العربية السعودية • الرياض</p>
+                </div>
+                <div class="space-y-1 md:text-left">
+                    <span class="text-white font-bold block text-sm">الموجه إليه العرض:</span>
+                    <p class="text-gray-300 font-bold">مكتب أحمد حجاج للشحن</p>
+                    <p>الاسم والصفة: ................................................................</p>
+                    <p>التوقيع والختم: ................................................</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Interactive Ambient Canvas Script -->
+    <script>
+        (function() {
+            const canvas = document.getElementById('interactive-bg-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            let width, height;
+            let particles = [];
+            const particleCount = 40;
+            const colors = ['#0A4C86', '#06B6D4', '#00875A', '#7C3AED', '#D4AF37'];
+
+            function resize() {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+            }
+
+            window.addEventListener('resize', resize);
+
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * width;
+                    this.y = Math.random() * height;
+                    this.vx = (Math.random() - 0.5) * 0.7;
+                    this.vy = (Math.random() - 0.5) * 0.7;
+                    this.radius = Math.random() * 2 + 1;
+                    this.color = colors[Math.floor(Math.random() * colors.length)];
+                    this.alpha = Math.random() * 0.35 + 0.2;
+                }
+
+                update() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+                    if (this.x < 0 || this.x > width) this.vx *= -1;
+                    if (this.y < 0 || this.y > height) this.vy *= -1;
+                }
+
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = this.color;
+                    ctx.globalAlpha = this.alpha;
+                    ctx.fill();
+                }
+            }
+
+            function init() {
+                resize();
+                particles = [];
+                for (let i = 0; i < particleCount; i++) {
+                    particles.push(new Particle());
+                }
+            }
+
+            function connect() {
+                const maxDist = 130;
+                for (let a = 0; a < particles.length; a++) {
+                    for (let b = a + 1; b < particles.length; b++) {
+                        let dx = particles[a].x - particles[b].x;
+                        let dy = particles[a].y - particles[b].y;
+                        let dist = Math.sqrt(dx * dx + dy * dy);
+
+                        if (dist < maxDist) {
+                            ctx.beginPath();
+                            ctx.moveTo(particles[a].x, particles[a].y);
+                            ctx.lineTo(particles[b].x, particles[b].y);
+                            ctx.strokeStyle = '#D4AF37';
+                            ctx.globalAlpha = (1 - (dist / maxDist)) * 0.2;
+                            ctx.lineWidth = 1;
+                            ctx.stroke();
+                        }
+                    }
+                }
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, width, height);
+                ctx.globalAlpha = 1;
+                for (let i = 0; i < particles.length; i++) {
+                    particles[i].update();
+                    particles[i].draw();
+                }
+                connect();
+                requestAnimationFrame(animate);
+            }
+
+            window.onload = function() {
+                init();
+                animate();
+            };
+        })();
+    </script>
+</body>
+</html>
